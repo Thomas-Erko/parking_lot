@@ -326,4 +326,3 @@ xyzservices==2022.9.0
 yapf==0.40.2
 yarl==1.9.3
 zict==3.0.0
-zipp==3.17.0

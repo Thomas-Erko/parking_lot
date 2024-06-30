@@ -28,16 +28,16 @@ done
 #
 
 # Virtual Env Check
-current_venv=$CONDA_DEFAULT_ENV
-expected_venv="parking_lot"
-if [ $current_venv = $expected_venv ]; then 
-    echo -e "\n> Enviroment check: Passed\n"
-else 
-    echo -e "\n> Enviroment Check: Failed"
-    echo -e "\t> Current Enviroment: $current_venv"
-    echo -e "\t> Expected Enviroment: $expected_venv \n" 
-    echo >&2 -e "Enviroment Error: You must be in the '$expected_venv' venv to run this script\n"; exit 1;
-fi 
+#current_venv=$CONDA_DEFAULT_ENV
+#expected_venv="parking_lot"
+#if [ $current_venv = $expected_venv ]; then 
+#    echo -e "\n> Enviroment check: Passed\n"
+#else 
+#    echo -e "\n> Enviroment Check: Failed"
+#    echo -e "\t> Current Enviroment: $current_venv"
+#    echo -e "\t> Expected Enviroment: $expected_venv \n" 
+#    echo >&2 -e "Enviroment Error: You must be in the '$expected_venv' venv to run this script\n"; exit 1;
+#fi 
 
 # Directory Check
 current_dir="$(basename $PWD)"

@@ -52,6 +52,9 @@ else
     echo >&2 -e "Directory Error: You must be in the '$expected_dir' folder to run this script\n"; exit 1;
 fi
 
+echo "> Installing repo requirments"
+pip3 install -qr requirements.txt 2>/dev/null   
+
 # User Check
 echo "> All checks have passed. YOLO imports and requirment installs will follow."
 while [ "$auto_run" = False ]

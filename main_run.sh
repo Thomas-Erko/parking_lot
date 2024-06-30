@@ -44,7 +44,7 @@ current_dir="$(basename $PWD)"
 expected_dir="parking_lot"
 
 if [ $current_dir = $expected_dir ]; then 
-    echo -e "> Directory check: Passed\n"
+    echo -e "\n> Directory check: Passed\n"
 else 
     echo -e "\n> Directory Check: Failed"
     echo -e "\t> Current Directory: $current_dir"
@@ -52,7 +52,7 @@ else
     echo >&2 -e "Directory Error: You must be in the '$expected_dir' folder to run this script\n"; exit 1;
 fi
 
-echo "> Installing repo requirments"
+echo -e "> Installing repo requirments\n"
 pip3 install -qr requirements.txt 2>/dev/null   
 
 # User Check
@@ -85,7 +85,7 @@ if [ -d yolov5 ] && [ "$auto_run" = False ]; then
         read -e -r -p '        > Would you like to use the present yolov5 dir ([y]/n)? ' choice
         case "$choice" in
         n) rm -rf yolov5
-            git clone https://github.com/ultralytics/yolov5 2>/dev/null  
+            git clone https://github.com/ultralytics/yolov5 #2>/dev/null  
             break;;
         y) break;;
         *) echo -e '\n\t> Response not valid. Please select "y" or "n"\n';;

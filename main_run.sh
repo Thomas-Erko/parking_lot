@@ -85,7 +85,7 @@ if [ -d yolov5 ] && [ "$auto_run" = False ]; then
         read -e -r -p '        > Would you like to use the present yolov5 dir ([y]/n)? ' choice
         case "$choice" in
         n) rm -rf yolov5
-            git clone https://github.com/ultralytics/yolov5 #2>/dev/null  
+            git clone https://github.com/ultralytics/yolov5 2>/dev/null  
             break;;
         y) break;;
         *) echo -e '\n\t> Response not valid. Please select "y" or "n"\n';;
@@ -100,7 +100,7 @@ fi
 
 echo -e "\n\t> Importing yolo requirments \n" 
 # Instaling YOLO Requirments
-pip3 install -qr yolov5/requirements.txt 2>/dev/null   
+pip3 install -qr yolov5/requirements.txt #2>/dev/null   
 
 echo -e "\n> Importing finetuning dataset from Roboflow & adjusting .yaml files\n" 
 # Imports roboflow and sets nc config in yolo yaml files

@@ -116,7 +116,7 @@ echo -e "\n> Tranining model\n"
 printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
 # Start training
 cd "yolov5" 
-python train.py --img 640 --batch 50 --epochs 300 --data ../Car-Space-Find-2/data.yaml --cfg ./models/yolov5s.yaml --weights yolov5s.pt --name yolov5s_results  --cache
+python3 train.py --img 640 --batch 50 --epochs 300 --data ../Car-Space-Find-2/data.yaml --cfg ./models/yolov5s.yaml --weights yolov5s.pt --name yolov5s_results  --cache
 cd ".."
 
 if [ -d yolov5_parking_spot ]; then
@@ -175,7 +175,7 @@ echo -e "\n> Tranining model\n"
 printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
 # Start training
 cd "yolov5" 
-python train.py --img 640 --batch 50 --epochs 300 --data ../Parking-Detection-2/data.yaml --cfg ./models/yolov5s.yaml --weights yolov5s.pt --name yolov5s_results  --cache
+python3 train.py --img 640 --batch 50 --epochs 300 --data ../Parking-Detection-2/data.yaml --cfg ./models/yolov5s.yaml --weights yolov5s.pt --name yolov5s_results  --cache
 cd ".."
 
 if [ -d yolov5_person ]; then
